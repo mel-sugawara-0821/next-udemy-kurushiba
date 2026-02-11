@@ -10,6 +10,9 @@ node v25.2.1
 3. Nextのルーティング
 　・基本的なルーティング（AppRouter?）
 　　・app配下にディレクトリ作成（about）
+　・動的ルーティングやルートグループ
+　　・ルートグループ
+　　　→ app/(admin)
 
 【TODO】
 ・eslint
