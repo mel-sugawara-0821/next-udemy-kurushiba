@@ -29,6 +29,8 @@ https://zenn.dev/pharmax/articles/ca59d9556468d5#pages-router
     ・Server Componentsを使用したデータ取得
     ・ストリーミングとローディング
 
+5. ServerAction、キャッシュについて
+
 
 【TODO】
 ・eslint
