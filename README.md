@@ -27,6 +27,7 @@ https://zenn.dev/pharmax/articles/ca59d9556468d5#pages-router
     ・Client Components
         ・'use client'と記述
     ・Server Componentsを使用したデータ取得
+    ・ストリーミングとローディング
 
 
 【TODO】
