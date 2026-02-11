@@ -1,17 +1,18 @@
+import { resolve } from "path";
 import { FormEvent, Suspense } from "react";
 
-export default  function Home() {
-  const createAction = async (formData: FormData) => {
-    'use server'
+async function getHeavyData() {
+  'use cache';
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return '重いデータの取得完了'
+}
 
-    const name = formData.get('name');
-    console.log('name----------------')
-    console.log(name)
-  };
+export default async function Home() {
+  const data = await getHeavyData()
+
   return (
-    <form action={createAction}>
-      <input type="text" name='name'/>
-      <button type="submit">送信</button>
-    </form>
+    <div>
+      <h1>{data}</h1>
+    </div>
   )
 }

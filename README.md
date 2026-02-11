@@ -30,6 +30,15 @@ https://zenn.dev/pharmax/articles/ca59d9556468d5#pages-router
     ・ストリーミングとローディング
 
 5. ServerAction、キャッシュについて
+    ・API Routes
+    ・ServerAction
+    ・キャッシュ機能
+        ・Full route cache サーバー側でキャッシュ？
+        ・Router cache ブラウザ側でキャッシュ？
+        ・Request〜
+        ・Data cache
+        https://zenn.dev/frontendflat/articles/nextjs-cache
+    ・use cache
 
 
 【TODO】
@@ -38,3 +47,4 @@ https://zenn.dev/pharmax/articles/ca59d9556468d5#pages-router
 ・ディレクトリ構成
 https://zenn.dev/yamu_official/articles/70f59488e8415d
 ・fetchのキャッシュ機能の制御
+・状態管理
