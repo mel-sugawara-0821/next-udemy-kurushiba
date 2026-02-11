@@ -14,6 +14,8 @@ node v25.2.1
 　　・ルートグループ
 　　　→ app/(admin)
 　・パラレルルート
+　・Intercepting Routes
 
 【TODO】
 ・eslint
+・css（コンポーネント式）
