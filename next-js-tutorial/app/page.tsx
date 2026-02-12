@@ -1,26 +1,18 @@
-import { Suspense } from "react";
-import SlowComponent from "./SlowComponents";
-type Post = {
-  id: number,
-  title: string
+import { resolve } from "path";
+import { FormEvent, Suspense } from "react";
+
+async function getHeavyData() {
+  'use cache';
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+  return '重いデータの取得完了'
 }
 
 export default async function Home() {
-  // Note: fetchのキャッシュ機能？
-  // const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-  // const posts: Post[] = await res.json();
+  const data = await getHeavyData()
 
   return (
-    <>
-      <h1>メインコンテンツ（すぐ表示）</h1>
-      {/* <Suspense fallback={<div>重いコンポーネントを読み込み中。。。</div>}> */}
-        <SlowComponent />
-      {/* </Suspense> */}
-      {/* <ul>{
-        posts.map((post) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul> */}
-    </>
-  );
+    <div>
+      <h1>{data}</h1>
+    </div>
+  )
 }
